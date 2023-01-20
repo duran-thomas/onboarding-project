@@ -2,14 +2,14 @@ const r_ship = Math.floor(Math.random() * 5) + 1
 
 Feature('Guestbook');
     
-Scenario('verify username',  ({ I }) => {
+Scenario('I can verify that I am on the correct obit',  ({ I }) => {
     //Given I am on a Janus obituary page
     //When I visit Virginia's Obituary
     I.amOnPage('/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379');
     //Then I should see her name in the heading
     I.see('Virginia','.Heading-sc-4h3nqe-0')
 });
-Scenario('add entry to guestbook',  ({ I }) => {
+Scenario('I can add an entry to the guestbook',  ({ I }) => {
     //Given  I visit Virginia's Obituary
     I.amOnPage('/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379');
     I.see('Virginia','.Heading-sc-4h3nqe-0')
