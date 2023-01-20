@@ -1,5 +1,7 @@
+const r_ship = Math.floor(Math.random() * 5) + 1
+
 Feature('Guestbook');
-    const r_ship = Math.floor(Math.random() * 5) + 1
+    
 Scenario('verify username and add entry to guestbook',  ({ I }) => {
     I.amOnPage('/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379');
     I.see('Virginia','.Heading-sc-4h3nqe-0')
