@@ -13,7 +13,7 @@ Scenario("I can verify that I am on the correct obit", ({ I, obitPage }) => {
   I.see("Virginia", obitPage.nameHeader);
 });
 
-Scenario.only("I can add an entry to the guestbook", ({ I }) => {
+Scenario("I can add an entry to the guestbook", ({ I }) => {
   // Given I am on a Janus obituary page
   I.amOnPage(
     "/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379"
