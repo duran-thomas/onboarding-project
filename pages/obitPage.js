@@ -17,8 +17,8 @@ module.exports = {
 
   // Function to create a new guestbook entry
   createGuestBookEntry(message, index, name, email) {
-    I.fillField(this.fields.messageBox, message),
-      I.click(this.r_shipBtn(index));
+    I.fillField(this.fields.messageBox, message);
+    I.click(this.r_shipBtn(index));
     I.fillField(this.fields.nameField, name);
     I.fillField(this.fields.emailField, email);
     I.click(this.submitBtn);
