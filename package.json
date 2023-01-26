@@ -31,5 +31,10 @@
         "codeceptjs": "^3.3.7",
         "playwright": "^1.29.2",
         "webdriverio": "^6.12.1"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "mssql": "^9.1.1",
+        "pg": "^8.8.0"
     }
 }

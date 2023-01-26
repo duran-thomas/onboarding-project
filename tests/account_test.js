@@ -12,7 +12,8 @@ Scenario("I can verify that I am on the correct obit", ({ I, obitPage }) => {
   // Then I should see her name in the heading
   I.see("Virginia", obitPage.nameHeader);
 });
-Scenario("I can add an entry to the guestbook", ({ I }) => {
+
+Scenario.only("I can add an entry to the guestbook", ({ I }) => {
   // Given I am on a Janus obituary page
   I.amOnPage(
     "/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379"
@@ -26,4 +27,9 @@ Scenario("I can add an entry to the guestbook", ({ I }) => {
     "Duran",
     "dthomas@qualityworkscg.com"
   );
+});
+
+Scenario("I can get data from endpoint", async ({ I }) => {
+  let data = await I.getJanusPersonRecord();
+  console.log(data.recordset);
 });
