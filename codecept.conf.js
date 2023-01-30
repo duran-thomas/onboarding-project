@@ -18,6 +18,14 @@ exports.config = {
     MyHelper: {
       require: "./customHelpers/dbhelper_helper.js",
     },
+    REST: {
+      endpoint: "https://www.qa-legacy.com",
+      prettyPrintJson: true,
+      timeout: 6000,
+      // onRequest: (request) => {
+      //   console.log(request);
+      // },
+    },
   },
   include: {
     I: "./steps_file.js",
