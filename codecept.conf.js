@@ -22,9 +22,6 @@ exports.config = {
       endpoint: "https://www.qa-legacy.com",
       prettyPrintJson: true,
       timeout: 6000,
-      // onRequest: (request) => {
-      //   console.log(request);
-      // },
     },
   },
   include: {
