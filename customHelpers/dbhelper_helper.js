@@ -29,8 +29,9 @@ class DBHelper extends Helper {
 
   async getJanusPersonRecord() {
     let result;
-    const query =
-      "SELECT TOP 1 * FROM tblPerson (NOLOCK) WHERE Source IN ('bismarcktribune', 'chippewa', 'beatricedailysun', 'columbustelegram', 'fremonttribune')";
+    const query = `SELECT TOP 1 * 
+      FROM tblPerson (NOLOCK)
+      WHERE Source IN ('bismarcktribune', 'chippewa', 'beatricedailysun', 'columbustelegram', 'fremonttribune')`;
     try {
       await sql.connect(dbConfig);
       result = await sql.query(query);
