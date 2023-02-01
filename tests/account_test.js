@@ -1,5 +1,5 @@
 const { obitPage } = inject();
-// Genrrates a random number between 1 and 5
+// Generates a random number between 1 and 5
 const r_ship = Math.floor(Math.random() * 5) + 1;
 
 Feature("Guestbook");
@@ -30,7 +30,7 @@ Scenario("I can add an entry to the guestbook", ({ I }) => {
     "dthomas@qualityworkscg.com"
   );
 })
-  .tag("@JanusBeta")
+  .tag("@janusBeta")
   .tag("@prodSafe");
 
 Scenario("I can get data from endpoint", async ({ I }) => {
