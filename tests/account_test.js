@@ -11,7 +11,9 @@ Scenario("I can verify that I am on the correct obit", ({ I, obitPage }) => {
   );
   // Then I should see her name in the heading
   I.see("Virginia", obitPage.nameHeader);
-});
+})
+  .tag("@janusBeta")
+  .tag("@productionSafe");
 
 Scenario("I can add an entry to the guestbook", ({ I }) => {
   // Given I am on a Janus obituary page
@@ -27,9 +29,11 @@ Scenario("I can add an entry to the guestbook", ({ I }) => {
     "Duran",
     "dthomas@qualityworkscg.com"
   );
-});
+})
+  .tag("@JanusBeta")
+  .tag("@prodSafe");
 
 Scenario("I can get data from endpoint", async ({ I }) => {
   let data = await I.getJanusPersonRecord();
   console.log(data.recordset);
-});
+}).tag("@webDriver");
