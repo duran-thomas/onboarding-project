@@ -12,8 +12,8 @@ Scenario("I can verify that I am on the correct obit", ({ I, obitPage }) => {
   // Then I should see her name in the heading
   I.see("Virginia", obitPage.nameHeader);
 })
-  .tag("@JanusBeta")
-  .tag("@prodSafe");
+  .tag("@janusBeta")
+  .tag("@productionSafe");
 
 Scenario("I can add an entry to the guestbook", ({ I }) => {
   // Given I am on a Janus obituary page
