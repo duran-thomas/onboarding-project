@@ -1,14 +1,4 @@
-const { setHeadlessWhen, setCommonPlugins } = require("@codeceptjs/configure");
-// turn on headless mode when running with HEADLESS=true environment variable
-// export HEADLESS=true && npx codeceptjs run
-setHeadlessWhen(process.env.HEADLESS);
-
-// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
-setCommonPlugins();
-
-/** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: "./tests/*_test.js",
   output: "./output",
   helpers: {
     WebDriver: {
@@ -28,5 +18,47 @@ exports.config = {
     I: "./steps_file.js",
     obitPage: "./pages/obitPage.js",
   },
+  mocha: {},
+  bootstrap: null,
+  timeout: null,
+  teardown: null,
+  hooks: [],
+  gherkin: {
+    features: "./features/*.feature",
+    steps: [
+      "./step_definitions/steps.js",
+      "./step_definitions/dataDriven_steps.js",
+    ],
+  },
+  plugins: {
+    screenshotOnFail: {
+      enabled: false,
+    },
+    tryTo: {
+      enabled: true,
+    },
+    retryFailedStep: {
+      enabled: true,
+    },
+    retryTo: {
+      enabled: true,
+    },
+    eachElement: {
+      enabled: true,
+    },
+    pauseOnFail: {},
+  },
+  stepTimeout: 0,
+  stepTimeoutOverride: [
+    {
+      pattern: "wait.*",
+      timeout: 0,
+    },
+    {
+      pattern: "amOnPage",
+      timeout: 0,
+    },
+  ],
+  tests: "./tests/*_test.js",
   name: "onboarding-project",
 };

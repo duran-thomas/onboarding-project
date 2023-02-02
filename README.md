@@ -36,3 +36,15 @@ Run all the tests that are safe for production, run the following command
 ```bash
   npm run prodSafe
 ```
+
+Run all the BDD REST-based tests, run the following command
+
+```bash
+  npm run bdd-rest
+```
+
+Run all the BDD Webdriver-based tests, run the following command
+
+```bash
+  npm run bdd-webdriver
+```

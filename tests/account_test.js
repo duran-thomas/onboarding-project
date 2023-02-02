@@ -31,7 +31,7 @@ Scenario("I can add an entry to the guestbook", ({ I }) => {
   );
 })
   .tag("@janusBeta")
-  .tag("@prodSafe");
+  .tag("@productionSafe");
 
 Scenario("I can get data from endpoint", async ({ I }) => {
   let data = await I.getJanusPersonRecord();
