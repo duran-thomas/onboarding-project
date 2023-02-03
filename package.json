@@ -15,7 +15,9 @@
     "rest": "npx codeceptjs run --grep '@restAPI'",
     "webdriver": "npx codeceptjs run --grep '@webDriver'",
     "janus": "npx codeceptjs run --grep '@JanusBeta'",
-    "prodSafe": "npx codeceptjs run --grep '@prodSafe'"
+    "prodSafe": "npx codeceptjs run --grep '@productionSafe'",
+    "bdd-rest": "npx codeceptjs run --features --grep '@restAPI'",
+    "bdd-webdriver": "npx codeceptjs run --features --grep '@webDriver'"
   },
   "repository": {
     "type": "git",
